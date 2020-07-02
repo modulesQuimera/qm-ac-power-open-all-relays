@@ -1,0 +1,25 @@
+{
+  "name": "qm-hub-acpower-open-all-relays",
+  "version": "1.0.0",
+  "description": "method to open the relays",
+  "main": "openAllRelays.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modulesQuimera/qm-hub-acpower-open-all-relays.git"
+  },
+  "keywords": ["quimera", "hub", "JIG"],
+  "author": "HUB-LSE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modulesQuimera/qm-hub-acpower-open-all-relays/issues"
+  },
+  "homepage": "https://github.com/modulesQuimera/qm-hub-acpower-open-all-relays#readme",
+  "node-red": {
+    "nodes": {
+      "openAllRelays": "openAllRelays.js"
+    }
+  }
+}

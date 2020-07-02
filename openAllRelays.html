@@ -1,0 +1,63 @@
+<script type="text/javascript">
+    RED.nodes.registerType('OpenAllRelays',{
+        category: 'AC Power Module',
+        color: '#87CEEB',
+        defaults: {
+            name:{
+                value: ""
+            },
+            // gpionum:{
+            //     value: ""
+            // },
+            // output:{
+            //     value: "false"
+            // },
+            // serial:{
+            //     type: "serial-template",
+            //     required: true
+            // },
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-bars",
+        label: function() { return this.name || "OpenAllRelays" },
+        paletteLabel: "OpenAllRelays",
+    });
+</script>
+
+<script type="text/html" data-template-name="OpenAllRelays">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <!-- <div class="form-row" >
+        <label for="node-input-gpionum"><i class="fa fa-microchip" aria-hidden="true"></i> Numero do GPIO</label>
+        <select id="node-input-gpionum" style="width:15%;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <label for="node-input-output" style="margin-left:20%;"><i class="fa fa-sign-out" aria-hidden="true"></i> Output</label>
+        <select id="node-input-output" style="width:18%; margin-left:-30px">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+    </div> -->
+    <!-- <div class="form-row node-input-serial">
+        <label for="node-input-serial"><i class="fa fa-random"></i> Serial Port</label>
+        <input type="text" id="node-input-serial">
+    </div> -->
+</script>
+
+<script type="text/html" data-help-name="OpenAllRelays">
+    <p>Working on it...</p>
+</script>
