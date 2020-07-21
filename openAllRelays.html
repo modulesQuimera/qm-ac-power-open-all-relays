@@ -6,6 +6,7 @@
             name:{
                 value: ""
             },
+            slot:{value:"", required:true}
             // gpionum:{
             //     value: ""
             // },
@@ -19,17 +20,62 @@
         },
         inputs:1,
         outputs:1,
-        icon: "./icons/Open_All_Relays.svg",
-        label: function() { return this.name || "Open All Relays" },
+        icon: "AC_Power.svg",
+        label: function() { return this.name? "Open All Relays - " + this.name: "Open All Relays" },
         paletteLabel: "Open All Relays",
     });
 </script>
 
+
+
+<style>
+
+
+    label{
+        width: 50% !important;
+        margin-bottom: 2px !important;
+    }
+
+    .columm{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    hr {
+    width: 40% !important;
+    float: left !important;
+    }
+
+    .hr-div-openRelay{
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-top: 400px !important;
+    }
+
+    .optional{
+        height: max-content !important;
+        margin-top: 10px !important;
+    }
+
+    .descript{
+        text-align: center;
+    }
+
+</style>
+
+
 <script type="text/html" data-template-name="OpenAllRelays">
-    <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
+
+    <div class="form-row columm">
+        <strong class="descript">
+            Changes the status of all relays to open
+        </strong>
     </div>
+    <div class="form-row columm">
+        <label  for="node-input-slot"><i class="fa fa-sliders"></i> Slot</label>
+        <input type="number" id="node-input-slot" style="width:20%;">
+    </div>
+
     <!-- <div class="form-row" >
         <label for="node-input-gpionum"><i class="fa fa-microchip" aria-hidden="true"></i> Numero do GPIO</label>
         <select id="node-input-gpionum" style="width:15%;">
@@ -56,8 +102,19 @@
         <label for="node-input-serial"><i class="fa fa-random"></i> Serial Port</label>
         <input type="text" id="node-input-serial">
     </div> -->
+
+    <div class="hr-div-openRelay">
+        <hr>
+        <span class="optional">Optional</span>
+        <hr>
+    </div>
+
+    <div class="form-row columm">
+        <label style="width: 50% !important;" for="node-input-name" ><i class="fa fa-tag"></i> Component Nickname</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
 </script>
 
 <script type="text/html" data-help-name="OpenAllRelays">
-    <p>Working on it...</p>
+    <p>Changes the status of all relays to open</p>
 </script>
